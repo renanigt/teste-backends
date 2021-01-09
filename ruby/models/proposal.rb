@@ -1,5 +1,6 @@
 class Proposal
-  attr_accessor :loan_value, :installments, :warranties, :proponents
+  attr_accessor :loan_value, :installments
+  attr_reader :warranties, :proponents
 
   def initialize(id:, loan_value:, installments:)
     @id = id
