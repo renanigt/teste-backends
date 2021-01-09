@@ -18,7 +18,7 @@ class ProponentValidatorTest < Minitest::Test
     assert_equal false, ProponentValidator.new(@proponent).validate
   end
 
-  def test_should_be_valid_for_provinces_allowed
+  def test_should_be_valid_for_age_equals_or_greater_than_18
     assert ProponentValidator.new(@proponent).validate
   end
 end
