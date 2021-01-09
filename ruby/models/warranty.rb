@@ -1,4 +1,5 @@
 class Warranty
+  attr_reader :id
   attr_accessor :value, :province
 
   def initialize(id:, value:, province:)

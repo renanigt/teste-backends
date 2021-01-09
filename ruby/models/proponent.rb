@@ -1,5 +1,6 @@
 class Proponent
-  attr_accessor :age, :monthly_income, :main
+  attr_reader :id
+  attr_accessor :name, :age, :monthly_income, :main
 
   def initialize(id:, name:, age:, monthly_income:, main:)
     @id = id
