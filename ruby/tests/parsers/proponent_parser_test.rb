@@ -12,10 +12,10 @@ class ProposalParserTest < Minitest::Test
   def test_should_parse_proponent_based_on_event_data
     proponent = ProponentParser.new(@event).parse
 
-    assert_equal "2213ea91-4a3c-46a3-b3a7-ff55c2888561", proponent.id
+    assert_equal "bb8a50f2-5fe8-4d14-9107-eba65129582a", proponent.id
     assert_equal "Kathline Ferry", proponent.name
     assert_equal 50, proponent.age
-    assert_equal 168896.38, proponent.monthly_income
-    assert proponent.main
+    assert_equal 16889.38, proponent.monthly_income
+    assert_equal false, proponent.main
   end
 end
