@@ -6,11 +6,11 @@ class ProposalParserTest < Minitest::Test
   def setup
     events_text = File.readlines('tests/files/proposal_events.txt')
     data = events_text[0]
-    @event = EventParser.new(data).parse
+    @event = EventParser.new(data).call
   end
 
   def test_should_parse_proposal_based_on_event_data
-    proposal = ProposalParser.new(@event).parse
+    proposal = ProposalParser.new(@event).call
 
     assert_equal "80921e5f-4307-4623-9ddb-5bf826a31dd7", proposal.id
     assert_equal 1141424.0, proposal.loan_value

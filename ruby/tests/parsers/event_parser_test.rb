@@ -8,7 +8,7 @@ class EventParserTest < Minitest::Test
   end
 
   def test_should_parse_event
-    event = EventParser.new(@data).parse
+    event = EventParser.new(@data).call
 
     assert_equal "72ff1d14-756a-4549-9185-e60e326baf1b", event.id
     assert_equal "proposal", event.schema

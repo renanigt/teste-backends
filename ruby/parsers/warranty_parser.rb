@@ -5,7 +5,7 @@ class WarrantyParser
     @event = event
   end
 
-  def parse
+  def call
     Warranty.new(
       id: event.data[5],
       value: event.data[6].to_f,

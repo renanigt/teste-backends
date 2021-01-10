@@ -5,7 +5,7 @@ class ProposalParser
     @event = event
   end
 
-  def parse
+  def call
     Proposal.new(
       id: event.data[4],
       loan_value: event.data[5].to_f,

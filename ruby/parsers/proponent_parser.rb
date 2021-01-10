@@ -5,7 +5,7 @@ class ProponentParser
     @event = event
   end
 
-  def parse
+  def call
     Proponent.new(
       id: event.data[5],
       name: event.data[6],

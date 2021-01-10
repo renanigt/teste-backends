@@ -5,7 +5,7 @@ class EventParser
     @data = data.split(',')
   end
 
-  def parse
+  def call
     Event.new(
       id: data[0],
       schema: data[1],
