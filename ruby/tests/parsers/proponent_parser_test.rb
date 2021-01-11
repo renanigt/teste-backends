@@ -2,7 +2,7 @@ require 'minitest/autorun'
 require_relative '../../parsers/event_parser'
 require_relative '../../parsers/proponent_parser'
 
-class ProposalParserTest < Minitest::Test
+class ProponentParserTest < Minitest::Test
   def setup
     events_text = File.readlines('tests/files/proponent_events.txt')
     data = events_text[0]

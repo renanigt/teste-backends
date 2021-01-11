@@ -11,11 +11,11 @@ class Proposal
   end
 
   def add_warranty(warranty)
-    @warranties << warranty
+    warranties << warranty
   end
 
   def add_proponent(proponent)
-    @proponents << proponent
+    proponents << proponent
   end
 
   def main_proponent

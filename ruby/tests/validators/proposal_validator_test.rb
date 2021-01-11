@@ -5,7 +5,7 @@ Dir['models/*.rb'].each { |file| require_relative "../../#{file}" }
 class ProposalValidatorTest < Minitest::Test
   def setup
     @proposal = Proposal.new(id: '72ff1d14-756a-4549-9185-e60e326baf1b1', loan_value: 40000.0, installments: 150)
-    @warranty = Warranty.new(id: 'cff38b44-01f0-4e3f-9a49-f625fd2022ab', value: 80000.0, province: 'CE')
+    @warranty = Warranty.new(id: 'cff38b44-01f0-4e3f-9a49-f625fd2022ab', value: 80000.0, province: 'CE', proposal_id: @proposal.id)
     @proponent_renan = Proponent.new(
       id: '399c4c93-7456-4b42-8e7c-c89eb8372e78',
       name: 'Renan Montenegro',
@@ -65,7 +65,7 @@ class ProposalValidatorTest < Minitest::Test
   end
 
   def test_should_be_invalid_if_there_is_at_least_one_warranty_from_not_allowed_province
-    @proposal.add_warranty(Warranty.new(id: '121b7334-34a4-4017-8b53-087584d54ac0', value: 80000.0, province: 'SC'))
+    @proposal.add_warranty(Warranty.new(id: '121b7334-34a4-4017-8b53-087584d54ac0', value: 80000.0, province: 'SC', proposal_id: @proposal.id))
 
     assert_equal false, ProposalValidator.new(@proposal).validate
   end

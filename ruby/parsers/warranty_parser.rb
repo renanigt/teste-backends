@@ -9,7 +9,8 @@ class WarrantyParser
     Warranty.new(
       id: event.data[5],
       value: event.data[6].to_f,
-      province: event.data[7]
+      province: event.data[7],
+      proposal_id: event.proposal_id
     )
   end
 

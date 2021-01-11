@@ -15,6 +15,6 @@ class EventParserTest < Minitest::Test
     assert_equal "created", event.action
     assert_equal "2019-11-11T14:28:01Z", event.timestamp
     assert_equal "80921e5f-4307-4623-9ddb-5bf826a31dd7", event.proposal_id
-    assert_equal @data, event.data.join(',')
+    assert_equal @data.strip, event.data.join(',')
   end
 end
