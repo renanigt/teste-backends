@@ -131,7 +131,7 @@ class EventProcessorTest < Minitest::Test
   def create_proposal
     proposal = Proposal.new(id: 'af6e600b-2622-40d1-89ad-d3e5b6cc2fdf', loan_value: 150000.0, installments: 130)
     proposal.add_warranty(
-      Warranty.new(id: '37113e50-26ae-48d2-aaf4-4cda8fa76c79', value: 300000.0, province: 'CE', proposal_id: proposal.id)
+      Warranty.new(id: '37113e50-26ae-48d2-aaf4-4cda8fa76c79', value: 300000.0, province: 'CE')
     )
     proposal.add_proponent(
       Proponent.new(id: '2213ea91-4a3c-46a3-b3a7-ff55c2888561', name: 'Renan Montenegro', age: 30, monthly_income: 2000.0, main: true)

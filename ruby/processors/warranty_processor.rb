@@ -13,7 +13,7 @@ class WarrantyProcessor
 
     case event.name
     when Event::NAMES[:WARRANTY_ADDED]
-      warranty_service.add_warranty(warranty)
+      proposal.add_warranty(warranty)
     when Event::NAMES[:WARRANTY_UPDATED]
       warranty_service.update_warranty(warranty)
     when Event::NAMES[:WARRANTY_REMOVED]

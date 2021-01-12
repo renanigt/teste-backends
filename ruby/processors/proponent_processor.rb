@@ -13,7 +13,7 @@ class ProponentProcessor
 
     case event.name
     when Event::NAMES[:PROPONENT_ADDED]
-      proponent_service.add_proponent(proponent)
+      proposal.add_proponent(proponent)
     when Event::NAMES[:PROPONENT_UPDATED]
       proponent_service.update_proponent(proponent)
     when Event::NAMES[:PROPONENT_REMOVED]

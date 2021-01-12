@@ -50,7 +50,7 @@ class WarrantyProcessorTest < Minitest::Test
   def create_proposal
     proposal = Proposal.new(id: 'af6e600b-2622-40d1-89ad-d3e5b6cc2fdf', loan_value: 150000.0, installments: 130)
     proposal.add_warranty(
-      Warranty.new(id: '37113e50-26ae-48d2-aaf4-4cda8fa76c79', value: 300000.0, province: 'CE', proposal_id: proposal.id)
+      Warranty.new(id: '37113e50-26ae-48d2-aaf4-4cda8fa76c79', value: 300000.0, province: 'CE')
     )
 
     proposal

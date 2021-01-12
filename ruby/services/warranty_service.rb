@@ -1,12 +1,6 @@
-require_relative 'proposal_service'
-
 class WarrantyService
   def initialize(proposal)
     @proposal = proposal
-  end
-
-  def add_warranty(warranty)
-    proposal.warranties << warranty
   end
 
   def update_warranty(warranty)

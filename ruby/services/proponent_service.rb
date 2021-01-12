@@ -1,12 +1,6 @@
-require_relative 'proposal_service'
-
 class ProponentService
   def initialize(proposal)
     @proposal = proposal
-  end
-
-  def add_proponent(proponent)
-    proposal.proponents << proponent
   end
 
   def update_proponent(proponent)
