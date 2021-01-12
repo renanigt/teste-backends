@@ -21,13 +21,13 @@ class MessagesProcessor
     proposals
   end
 
-  def valid_event?(event)
-    not_processed?(event) && not_delayed?(event)
-  end
-
   private
 
   attr_reader :processed_events, :proposals, :messages
+
+  def valid_event?(event)
+    not_processed?(event) && not_delayed?(event)
+  end
 
   def not_delayed?(event)
     processed_events.none? do |processed_event|
