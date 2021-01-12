@@ -7,7 +7,7 @@ require_relative '../../models/warranty'
 class WarrantyProcessorTest < Minitest::Test
   def setup
     @proposal = create_proposal
-    @warranty_events = File.readlines('tests/files/warranty_events.txt')
+    @warranty_events = File.readlines('test/files/warranty_events.txt')
   end
 
   def test_should_process_warranty_added_event

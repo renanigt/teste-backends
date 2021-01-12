@@ -6,7 +6,7 @@ require_relative '../../models/proposal'
 class ProposalProcessorTest < Minitest::Test
   def setup
     @proposals = [create_proposal]
-    @proposal_events = File.readlines('tests/files/proposal_events.txt')
+    @proposal_events = File.readlines('test/files/proposal_events.txt')
   end
 
   def test_should_process_proposal_created_event

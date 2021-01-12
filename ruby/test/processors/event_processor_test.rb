@@ -6,9 +6,9 @@ Dir['models/*.rb'].each { |file| require_relative "../../#{file}" }
 class EventProcessorTest < Minitest::Test
   def setup
     @proposals = [create_proposal]
-    @proposal_events = File.readlines('tests/files/proposal_events.txt')
-    @warranty_events = File.readlines('tests/files/warranty_events.txt')
-    @proponent_events = File.readlines('tests/files/proponent_events.txt')
+    @proposal_events = File.readlines('test/files/proposal_events.txt')
+    @warranty_events = File.readlines('test/files/warranty_events.txt')
+    @proponent_events = File.readlines('test/files/proponent_events.txt')
   end
 
   def test_should_process_proposal_created_event

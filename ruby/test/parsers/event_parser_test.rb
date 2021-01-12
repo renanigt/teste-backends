@@ -3,7 +3,7 @@ require_relative '../../parsers/event_parser'
 
 class EventParserTest < Minitest::Test
   def setup
-    events_text = File.readlines('tests/files/events.txt')
+    events_text = File.readlines('test/files/events.txt')
     @data = events_text[0]
   end
 

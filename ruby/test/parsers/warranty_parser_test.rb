@@ -4,7 +4,7 @@ require_relative '../../parsers/warranty_parser'
 
 class WarrantyParserTest < Minitest::Test
   def setup
-    events_text = File.readlines('tests/files/warranty_events.txt')
+    events_text = File.readlines('test/files/warranty_events.txt')
     data = events_text[0]
     @event = EventParser.new(data.strip).call
   end

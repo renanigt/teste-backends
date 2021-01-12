@@ -3,7 +3,7 @@ require_relative '../../processors/messages_processor'
 
 class MessagesProcessorTest < Minitest::Test
   def setup
-    @events = File.readlines('tests/files/events.txt')
+    @events = File.readlines('test/files/events.txt')
     @messages_processor = MessagesProcessor.new(@events)
   end
 

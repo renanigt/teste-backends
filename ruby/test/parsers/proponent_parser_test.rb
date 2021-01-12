@@ -4,7 +4,7 @@ require_relative '../../parsers/proponent_parser'
 
 class ProponentParserTest < Minitest::Test
   def setup
-    events_text = File.readlines('tests/files/proponent_events.txt')
+    events_text = File.readlines('test/files/proponent_events.txt')
     data = events_text[0]
     @event = EventParser.new(data).call
   end
