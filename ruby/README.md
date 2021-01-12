@@ -8,3 +8,8 @@ Para testar sua solução, rode:
 cd ./ruby/ # você precisa estar no diretório!
 ruby ./solution_test.rb
 ```
+## Configurando o ambiente
+
+Para rodar os testes:
+1. Você precisará primeiramente instalar as dependências do projeto: `bundle install`
+2. Para rodar a bateria de tests: `rake test`
