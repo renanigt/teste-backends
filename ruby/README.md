@@ -12,4 +12,4 @@ ruby ./solution_test.rb
 
 Para rodar os testes:
 1. Você precisará primeiramente instalar as dependências do projeto: `bundle install`
-2. Para rodar a bateria de tests: `rake test`
+2. Após ter as dependências instaladas você pode rodar a bateria de testes: `rake test`
