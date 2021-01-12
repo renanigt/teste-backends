@@ -1,3 +1,6 @@
+require_relative 'processors/messages_processor'
+require_relative 'validators/proposal_validator'
+
 class Solution
   # Essa função recebe uma lista de mensagens, por exemplo:
   #
@@ -11,5 +14,7 @@ class Solution
   # Complete a função para retornar uma string com os IDs das propostas válidas no seguinte formato (separado por vírgula):
   # "52f0b3f2-f838-4ce2-96ee-9876dd2c0cf6,51a41350-d105-4423-a9cf-5a24ac46ae84,50cedd7f-44fd-4651-a4ec-f55c742e3477"
   def process_messages(messages)
+    proposals = MessagesProcessor.new(messages).call
+    proposals.select { |proposal| ProposalValidator.new(proposal).validate }.map(&:id).join(",")
   end
 end
